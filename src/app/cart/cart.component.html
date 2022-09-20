@@ -1,0 +1,54 @@
+<div class="d-flex mt-4 justify-content-evenly">
+  <div class="card" style="width: 18rem">
+    <img
+      src="https://www.planetware.com/wpimages/2019/09/top-places-to-visit-in-the-world-paris-france.jpg"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">india</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <button (click)="selectproduct('india')">select the place</button>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU3wcX_k9h3tcOb9oRN7EC2okQUkxjeQpzDg&usqp=CAU"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">France</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <button (click)="selectproduct('france')">select the place</button>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem">
+    <img
+      src="https://img.traveltriangle.com/blog/wp-content/uploads/2020/03/shutterstock_1293922393.jpg"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">Turkey</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <button (click)="selectproduct('turkey')">select the place</button>
+    </div>
+  </div>
+</div>
+
+<div>
+  <h2>place selected</h2>
+  <h2>{{ anyproduct }} is selected</h2>
+
+  <button>Click here to select</button>
+</div>
