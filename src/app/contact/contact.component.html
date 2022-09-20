@@ -1,1 +1,40 @@
-<p>contact works!</p>
+<div class="container calculator">
+  <div class="screen-item screen">
+    <input type="text" class="w-55" value="{{ input }}" />
+  </div>
+  <dl class="touche__box">
+    <dt class="clear-item"><span (click)="PressBtn('clear')">clear</span></dt>
+    <dt class="touche__box-item">
+      <span class="soustraction" (click)="PressBtn('-')">_</span>
+    </dt>
+    <dt class="touche__box-item">
+      <span class="sign" (click)="PressBtn('+')">+</span>
+    </dt>
+    <dt class="touche__box-item clearme">
+      <span (click)="PressBtn('7')">7</span>
+    </dt>
+    <dt class="touche__box-item"><span (click)="PressBtn('8')">8</span></dt>
+    <dt class="touche__box-item"><span (click)="PressBtn('9')">9</span></dt>
+    <dt class="touche__box-item">
+      <span class="sign" (click)="PressBtn('/')">/</span>
+    </dt>
+    <dt class="touche__box-item"><span (click)="PressBtn('4')">4</span></dt>
+    <dt class="touche__box-item"><span (click)="PressBtn('5')">5</span></dt>
+    <dt class="touche__box-item"><span (click)="PressBtn('6')">6</span></dt>
+    <dt class="touche__box-item">
+      <span class="sign" (click)="PressBtn('x')">x</span>
+    </dt>
+    <dt class="touche__box-item"><span (click)="PressBtn('1')">1</span></dt>
+    <dt class="touche__box-item"><span (click)="PressBtn('2')">2</span></dt>
+    <dt class="touche__box-item"><span (click)="PressBtn('3')">3</span></dt>
+    <dt class="equal-item">
+      <span class="sign-equal" (click)="PressBtn('=')">=</span>
+    </dt>
+    <dt class="touche__box-item zero-item">
+      <span (click)="PressBtn('0')">0</span>
+    </dt>
+    <dt class="touche__box-item un-item">
+      <span class="sign" (click)="PressBtn('.')">.</span>
+    </dt>
+  </dl>
+</div>
