@@ -1,9 +1,14 @@
 <div class="container calculator">
   <div class="screen-item screen">
-    <input type="text" class="w-55" value="{{ input }}" />
+    <input
+      type="text"
+      class="w-55"
+      value="{{ input }}"
+      (change)="PressBtn($event)"
+    />
   </div>
   <dl class="touche__box">
-    <dt class="clear-item"><span (click)="PressBtn('clear')">clear</span></dt>
+    <dt class="clear-item"><span (click)="clear('clear()')">clear</span></dt>
     <dt class="touche__box-item">
       <span class="soustraction" (click)="PressBtn('-')">_</span>
     </dt>
