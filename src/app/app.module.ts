@@ -6,19 +6,18 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import { CartComponent } from './cart/cart.component';
-import { ContactComponent } from './contact/contact.component';
+
 import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRouters: Routes = [
   { path: '', component: HomeComponent },
   { path: 'cart', component: CartComponent },
-
-  { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CartComponent, ContactComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(appRouters)],
+  declarations: [AppComponent, HomeComponent, CartComponent],
+  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(appRouters) , ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
