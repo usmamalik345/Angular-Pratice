@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 
 import { RouterModule, Routes } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const appRouters: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +17,13 @@ const appRouters: Routes = [
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, CartComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(appRouters) , ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    RouterModule.forRoot(appRouters),
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

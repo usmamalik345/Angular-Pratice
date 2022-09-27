@@ -1,28 +1,58 @@
 <div class="wrapper">
   <div class="task-input d-flex">
     <input
-      #taskinput
+      #task_name
       type="text"
       placeholder="Add a new task"
-      value="{{ anytask }}"
+      [(ngModel)]="tasks_name"
     />
-    <button class="btn btn-primary mx-2 p-1" (click)="addto(taskinput.value)">
+    <button class="btn btn-primary mx-2 p-1" (click)="addto(task_name.value)">
       Add task
     </button>
   </div>
   <div class="controls">
     <div class="filters">
-      <span class="active" id="all">All</span>
-      <span id="pending" (click)="get('')"> pending </span>
-      <span id="completed" (click)="deletes('')">Completed</span>
+      <span
+        id="all"
+        [class.active]="selectedStatus == 'all'"
+        (click)="selectedStatus = 'all'"
+        >All</span
+      >
+      <span
+        id="pending"
+        class="active"
+        [class.active]="selectedStatus == 'pending'"
+        (click)="selectedStatus = 'pending'"
+      >
+        pending
+      </span>
+      <span
+        id="completed"
+        [class.active]="selectedStatus == 'completed'"
+        (click)="selectedStatus = 'completed'"
+        >Completed</span
+      >
     </div>
     <button class="clear-btn">Clear All</button>
   </div>
-  <ul class="task-box text-primary" *ngFor="let item of list">
-    {{
-      item.name
-    }}
-  </ul>
+  <ul
+    class="task-box text-primary"
+    *ngFor="let item of list; let myIndex = index"
+  >
+    <div
+      *ngIf="
+        selectedStatus == 'all' ||
+        (selectedStatus == 'pending' && item.completed == false) ||
+        (selectedStatus == 'completed' && item.completed == true)
+      "
+    >
+      <input type="checkbox" [(ngModel)]="item.completed" />
+      {{ item.name }}
 
-  
+      <span> &#10003; </span>
+      <span (click)="deleteItemEvent(myIndex)"> &#10060; </span>
+    </div>
+
+    <!--  -->
+  </ul>
 </div>

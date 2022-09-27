@@ -6,46 +6,27 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  anytask: any;
-
   list: any[] = [];
+  tasks_name = '';
+  selectedStatus = 'all';
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  addto(item: string) {
-    this.list.push({ id: this.list.length, name: item });
-    console.warn(this.list);
+  addto(name: string) {
+    this.list.push({ id: this.list.length, name: name, completed: false });
+    this.tasks_name = '';
+    // console.warn(this.list);
   }
 
-  get(item: string) {
-    console.log(item);
-  }
-  deletes(item: string) {
+  pending(item: string) {}
+  completed(item: string) {
     // this.list.push({ id: this.list.length, name: item });
     // console.log(item);
   }
-}
 
-ngOnInit() {
-  this.loadAllTodoList();
-}
-
-loadAllTodoList() {
-  this.todos = this.todoService.getAllTodos();
-}
-
-onClickEditTodoDetail(id) {
-  this.router.navigate(['/todo-detail'], {queryParams:{id:id}});
-}
-
-onClickAddTodo() {
-  this.router.navigate(['/todo-detail']);
-}
-
-onClickTodoDelete(id) {
-  this.todoService.deleteTodoDetail(id);
-  this.loadAllTodoList();
-}
+  deleteItemEvent(index: any) {
+    this.list.splice(index, 1);
+  }
 }
