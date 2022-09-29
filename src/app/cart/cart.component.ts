@@ -15,7 +15,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {}
 
   addto(name: string) {
-    this.list.push({ id: this.list.length, name: name, completed: false });
+    this.list.push({ name: name, completed: false });
     this.tasks_name = '';
     // console.warn(this.list);
   }

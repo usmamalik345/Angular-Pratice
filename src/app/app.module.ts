@@ -9,14 +9,16 @@ import { CartComponent } from './cart/cart.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { TodoComponent } from './todo/todo.component';
 
 const appRouters: Routes = [
   { path: '', component: HomeComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'todo', component: TodoComponent },
 ];
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CartComponent],
+  declarations: [AppComponent, HomeComponent, CartComponent, TodoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
