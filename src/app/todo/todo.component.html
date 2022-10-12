@@ -1,30 +1,30 @@
 <section>
   <div class="container">
-    <input type="text" class="inputField" #calcultorInput />
+    <input type="text" class="inputField" value="{{ calcultorInput }}" />
 
     <div id="display"></div>
 
     <div class="buttons">
-      <div class="button">C</div>
-      <div class="button">/</div>
-      <div class="button">*</div>
+      <div class="button" (click)="clearall('c')">C</div>
+      <div class="button" (click)="buttonpress('/')">/</div>
+      <div class="button" (click)="buttonpress('*')">*</div>
       <div class="button">&larr;</div>
       <div class="button" (click)="buttonpress('7')">7</div>
-      <div class="button">8</div>
-      <div class="button">9</div>
-      <div class="button">-</div>
-      <div class="button">4</div>
-      <div class="button">5</div>
-      <div class="button">6</div>
-      <div class="button">+</div>
-      <div class="button">1</div>
-      <div class="button">2</div>
-      <div class="button">3</div>
-      <div class="button">.</div>
-      <div class="button">(</div>
-      <div class="button">0</div>
-      <div class="button">)</div>
-      <div id="equal" class="button">=</div>
+      <div class="button" (click)="buttonpress('8')">8</div>
+      <div class="button" (click)="buttonpress('9')">9</div>
+      <div class="button" (click)="buttonpress('-')">-</div>
+      <div class="button" (click)="buttonpress('4')">4</div>
+      <div class="button" (click)="buttonpress('5')">5</div>
+      <div class="button" (click)="buttonpress('6')">6</div>
+      <div class="button" (click)="buttonpress('+')">+</div>
+      <div class="button" (click)="buttonpress('1')">1</div>
+      <div class="button" (click)="buttonpress('2')">2</div>
+      <div class="button" (click)="buttonpress('3')">3</div>
+      <div class="button" (click)="buttonpress('.')">.</div>
+      <div class="button" (click)="buttonpress('(')">(</div>
+      <div class="button" (click)="buttonpress('0')">0</div>
+      <div class="button" (click)="buttonpress(')')">)</div>
+      <div id="equal" class="button" (click)="buttonpress('=')">=</div>
     </div>
   </div>
 </section>

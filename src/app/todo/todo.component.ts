@@ -8,11 +8,22 @@ import { Component, OnInit } from '@angular/core';
 export class TodoComponent implements OnInit {
   constructor() {}
 
-  calcultorInput = '';
+  item: string;
+
+  calcultorInput: any = 0;
 
   ngOnInit(): void {}
-
+ 
   buttonpress(item: any) {
-    this.calcultorInput = item;
+    if (item === '=') {
+      this.calcultorInput = (0, eval)(this.calcultorInput);
+    } 
+     else {
+      this.calcultorInput += item;
+    }
+  }
+
+  clearall(item: any) {
+    this.calcultorInput = '';
   }
 }
