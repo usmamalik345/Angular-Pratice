@@ -1,23 +1,44 @@
-<form>
-  <div class="form-group">
-    <label for="firstName" class="form-label"> First Name</label>
-    <input type="text" id="firstName" class="form-control" />
+<div class="page-content page-container" id="page-content">
+  <div class="padding">
+    <div class="row container d-flex justify-content-center">
+      <div class="col-md-12">
+        <div class="card px-3">
+          <div class="card-body">
+            <h4 class="card-title">Awesome Todo list</h4>
+            <div class="add-items d-flex">
+              <input
+                [(ngModel)]="namey"
+                type="text"
+                class="form-control todo-list-input"
+                placeholder="What do you need to do today?"
+              />
+              <button
+                class="add btn btn-primary font-weight-bold todo-list-add-btn"
+                (click)="Addtask(namey)"
+              >
+                Add
+              </button>
+            </div>
+            <div class="list-wrapper">
+              <ul class="todo-list" *ngFor="let item of todoList ,  let  todoList = index">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" />
+                      {{ item.names }} <i class="input-helper"></i
+                    ></label>
+                  </div>
+                  <i
+                    class="remove mdi mdi-close-circle-outline"
+                    #indexs
+                    (click)="delteTask(indexs)"
+                  ></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <br />
-  <br />
-  <br />
-
-  <div class="form-group">
-    <label for="comments" class="form-label"> Comments</label>
-    <textarea
-      name=""
-      id="comments"
-      cols="30"
-      rows="10"
-      class="form-control"
-    ></textarea>
-  </div>
-
-  <button class="btn btn-primary">Submit</button>
-</form>
+</div>
