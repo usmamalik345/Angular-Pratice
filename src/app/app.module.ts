@@ -11,12 +11,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TodoComponent } from './todo/todo.component';
 import { TodosComponent } from './Mycommponent/todos/todos.component';
+import { TodoFComponent } from './Mycommponent/todo-f/todo-f.component';
 
 const appRouters: Routes = [
   { path: '', component: HomeComponent },
   { path: 'cart', component: CartComponent },
   { path: 'todo', component: TodoComponent },
   { path: 'todos', component: TodosComponent },
+  { path: 'todo-f', component: TodoFComponent },
 ];
 
 @NgModule({
@@ -26,6 +28,7 @@ const appRouters: Routes = [
     CartComponent,
     TodoComponent,
     TodosComponent,
+    TodoFComponent,
   ],
   imports: [
     BrowserModule,
