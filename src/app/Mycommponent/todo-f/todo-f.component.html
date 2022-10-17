@@ -7,32 +7,42 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="quiz-container" id="quiz">
+    <form
+      #myform="ngForm"
+      (submit)="next(myform.value)"
+      class="quiz-container"
+      id="quiz" 
+      
+    >
       <div class="quiz-header">
         <h2 id="question">Question text</h2>
         <ul>
           <li>
-            <input type="radio" name="answer" id="a" class="answer" />
-            <label for="a" id="a_text">Question</label>
+            <label for="a">{{ quizData[cruntQuestion].question }} </label>
           </li>
 
           <li>
-            <input type="radio" name="answer" id="b" class="answer" />
-            <label for="b" id="b_text">Question</label>
+            <input type="radio" name="answer" id="radio-a" value="a" ngModel />
+            <label for="radio-a">{{ quizData[cruntQuestion].a }}</label>
           </li>
 
           <li>
-            <input type="radio" name="answer" id="c" class="answer" />
-            <label for="c" id="c_text">Question</label>
+            <input type="radio" name="answer" id="radio-b" value="b" ngModel />
+            <label for="radio-b">{{ quizData[cruntQuestion].b }}</label>
           </li>
 
           <li>
-            <input type="radio" name="answer" id="d" class="answer" />
-            <label for="d" id="d_text">Question</label>
+            <input type="radio" name="answer" id="radio-c" value="c" ngModel />
+            <label for="radio-c">{{ quizData[cruntQuestion].c }}</label>
+          </li>
+
+          <li>
+            <input type="radio" name="answer" id="radio-d" value="d" ngModel />
+            <label for="radio-d">{{ quizData[cruntQuestion].d }}</label>
           </li>
         </ul>
       </div>
-      <button id="submit">Submit</button>
-    </div>
+      <button type="submit" id="submit" value="">Submit</button>
+    </form>
   </body>
 </html>
