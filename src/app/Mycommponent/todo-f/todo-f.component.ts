@@ -47,14 +47,18 @@ export class TodoFComponent implements OnInit {
     },
   ];
 
-  next(formvalue: any) {
+  next(myform: any) {
+    let formvalue = myform.value;
     console.log(formvalue);
 
     if (formvalue.answer === this.quizData[this.cruntQuestion].correct) {
-      this.cruntQuestion=this.cruntQuestion+1
-      alert('pass');
+      this.cruntQuestion = this.cruntQuestion + 1;
+
+      myform.form.reset();
+      
     } else {
-      alert('error');
+
+      console.log('error');
     }
   }
 

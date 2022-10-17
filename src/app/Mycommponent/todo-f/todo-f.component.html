@@ -9,10 +9,9 @@
   <body>
     <form
       #myform="ngForm"
-      (submit)="next(myform.value)"
+      (submit)="next(myform)"
       class="quiz-container"
-      id="quiz" 
-      
+      id="quiz"
     >
       <div class="quiz-header">
         <h2 id="question">Question text</h2>
@@ -40,6 +39,7 @@
             <input type="radio" name="answer" id="radio-d" value="d" ngModel />
             <label for="radio-d">{{ quizData[cruntQuestion].d }}</label>
           </li>
+          <p></p>
         </ul>
       </div>
       <button type="submit" id="submit" value="">Submit</button>
