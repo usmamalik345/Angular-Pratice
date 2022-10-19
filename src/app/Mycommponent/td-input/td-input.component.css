@@ -1,0 +1,13 @@
+input{
+    position: absolute;
+    bottom:  25%;
+    right: 35%;
+    border: 1px solid #ff5f6d;
+    color: #ff5f6d;
+    font-size: medium;
+    font-weight: 600;
+}
+
+ input:focus{
+    outline: none;
+}

@@ -12,6 +12,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TodoComponent } from './todo/todo.component';
 import { TodosComponent } from './Mycommponent/todos/todos.component';
 import { TodoFComponent } from './Mycommponent/todo-f/todo-f.component';
+import { TdInputComponent } from './Mycommponent/td-input/td-input.component';
 
 const appRouters: Routes = [
   { path: '', component: HomeComponent },
@@ -29,6 +30,7 @@ const appRouters: Routes = [
     TodoComponent,
     TodosComponent,
     TodoFComponent,
+    TdInputComponent,
   ],
   imports: [
     BrowserModule,

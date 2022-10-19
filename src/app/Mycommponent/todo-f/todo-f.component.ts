@@ -54,10 +54,10 @@ export class TodoFComponent implements OnInit {
     if (formvalue.answer === this.quizData[this.cruntQuestion].correct) {
       this.cruntQuestion = this.cruntQuestion + 1;
 
-      myform.form.reset();
-      
-    } else {
+     
 
+      myform.form.reset();
+    } else {
       console.log('error');
     }
   }
